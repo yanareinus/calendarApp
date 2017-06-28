@@ -1,0 +1,33 @@
+{
+  "name": "vagrant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/nodemon -L app.js",
+    "test": "node_modules/.bin/mocha --recursive tests/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.2",
+    "express-validator": "^2.21.0",
+    "handlebars-helpers": "^0.8.2",
+    "mocha": "^3.1.0",
+    "nodemon": "^1.10.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pg": "^6.4.0",
+    "sequelize": "^3.30.4",
+    "sequelize-cli": "^2.7.0",
+    "sqlite3": "^3.1.8"
+  }
+}

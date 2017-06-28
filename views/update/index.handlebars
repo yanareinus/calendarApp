@@ -1,0 +1,47 @@
+<div class="container background-image">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-offset-1 col-xs-10 registration-form">
+            <h1 class="text-center">update an event</h1>
+
+            <form method="post" action="/update/:{{post.id}}?_method=PUT">   
+                <div class="form-group">
+                    <label for="id_title">Title</label>
+                    <p class="error-msg">{{ title_error }}</p>
+                    <input type="text"  value={{post.title}} class="form-control" id="id_title" name="title" maxlength=30>
+                </div>
+                <div class="form-group">
+                    <label for="id_start_time">Start time</label>
+                    <p class="error-msg">{{ start_time_error }}</p>
+                    <input type="time" value={{post.start_time}} class="form-control" id="id_start_time" placeholder="start time" name="start_time" maxlength=30>
+                </div>
+                
+                <div class="form-group">
+                    <label for="id_end_time">End time</label>
+                    <p class="error-msg">{{ end_time_error }}</p>
+                    <input type="time" value={{post.end_time}} class="form-control" id="id_end_time" placeholder="end time" name="end_time" maxlength=30 required>
+                </div>
+
+                <div class="form-group">
+          <div class="col-lg-8">
+
+        <textarea rows="3" cols="40" maxlength="90" name="description">{{post.description}}</textarea>
+
+</div><br><br>
+                <input type="submit" class="btn btn-success btn-block" value="Update an event" />
+            </form>
+
+            <br><br><br>
+ <form name="delete" method="post" action="/update">
+          <div class="form-group col-xs-6 text-left">
+            <button type="submit" class="btn btn-default">Delete</button>
+          </div>
+     
+</form>
+
+        </div>
+    </div>
+</div>
+
+
+
+

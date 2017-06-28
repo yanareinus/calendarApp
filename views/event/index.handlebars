@@ -1,0 +1,69 @@
+{{#if post}}
+
+
+<table class="table">
+  <thead>
+    <tr>
+      
+     <th>Title</th>
+      <th>start time</th>
+      <th>End time</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+
+      {{#each post}}
+           <tr>
+           
+              <td>{{this.title}}
+              <td>{{this.start_time}}
+              <td>{{this.end_time}}
+              <td>{{this.description}}             
+</form>
+            </tr>
+
+        {{/each}}
+
+    </tbody>
+
+  </tbody>
+</table>
+
+{{/if}}
+
+
+<div class="container background-image">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-offset-1 col-xs-10 registration-form">
+            <h1 class="text-center">Create an event</h1>
+            <form method="post" action="/event">
+                <div class="form-group">
+                    <label for="id_title">Title</label>
+                    <p class="error-msg">{{ title_error }}</p>
+                    <input type="text" class="form-control" id="id_title"  name="title" maxlength=30>
+                </div>
+                <div class="form-group">
+                    <label for="id_start_time">Start time</label>
+                    <p class="error-msg">{{ start_time_error }}</p>
+                    <input type="time" class="form-control" id="id_start_time" name="start_time" maxlength=30>
+                </div>
+                
+                <div class="form-group">
+                    <label for="id_end_time">End time</label>
+                    <p class="error-msg">{{ end_time_error }}</p>
+                    <input type="time" class="form-control" id="id_end_time"  name="end_time" maxlength=30 required>
+                </div>
+
+                <div class="form-group">
+                    <label for="id_description">Description</label>
+                    <p class="error-msg">{{ description__error }}</p>
+                    
+                    <textarea class="form-control"  rows="3" cols="40" maxlength="90" name="description"></textarea>
+                </div>
+
+                <input type="submit" class="btn btn-success btn-block" value="Add event" />
+            </form>
+        </div>
+    </div>
+</div>
